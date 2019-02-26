@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Data Source-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TikiDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sản phẩm nổi bật" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vbl-qZ-JiD">
+                                <rect key="frame" x="16" y="258" width="119" height="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FHM-8U-O6U" customClass="FSPageControl" customModule="FSPagerView">
+                                <rect key="frame" x="0.0" y="209" width="375" height="25"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.3008882705" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="whY-As-mUF"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DDo-rq-Xbq" customClass="FSPagerView" customModule="FSPagerView">
+                                <rect key="frame" x="0.0" y="64" width="375" height="170"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="DDo-rq-Xbq" secondAttribute="height" multiplier="750:340" id="puk-D8-Fkw"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="tfX-Zg-ckb"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="fq2-u6-a2h"/>
+                                </connections>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sPB-Tf-RPZ">
+                                <rect key="frame" x="0.0" y="295" width="375" height="142"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="142" id="3QR-I3-Fgs"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="16" minimumInteritemSpacing="0.0" id="Hae-xK-dHc">
+                                    <size key="itemSize" width="112" height="112"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="16" minY="16" maxX="16" maxY="16"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="NTp-x8-blL" customClass="DemoColectionCell" customModule="TikiDemo" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="15" width="112" height="112"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="112" height="112"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baner4.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="KE8-Eh-nk3">
+                                                    <rect key="frame" x="21" y="0.0" width="70" height="70"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="70" id="dkW-lR-YO6"/>
+                                                        <constraint firstAttribute="height" constant="70" id="sRh-5h-34w"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vé máy bay giá rẻ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Twl-Bp-ugH">
+                                                    <rect key="frame" x="0.0" y="75" width="112" height="37"/>
+                                                    <color key="backgroundColor" red="0.086274509799999996" green="0.43921568630000002" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="12"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="KE8-Eh-nk3" firstAttribute="centerX" secondItem="NTp-x8-blL" secondAttribute="centerX" id="8k7-Qb-iMm"/>
+                                            <constraint firstAttribute="trailing" secondItem="Twl-Bp-ugH" secondAttribute="trailing" id="NHW-Em-C6c"/>
+                                            <constraint firstItem="Twl-Bp-ugH" firstAttribute="leading" secondItem="NTp-x8-blL" secondAttribute="leading" id="Uhj-VL-aS7"/>
+                                            <constraint firstItem="KE8-Eh-nk3" firstAttribute="top" secondItem="NTp-x8-blL" secondAttribute="top" id="Z1x-1u-0eb"/>
+                                            <constraint firstItem="Twl-Bp-ugH" firstAttribute="top" secondItem="KE8-Eh-nk3" secondAttribute="bottom" constant="5" id="jAT-Uz-ySL"/>
+                                            <constraint firstAttribute="bottom" secondItem="Twl-Bp-ugH" secondAttribute="bottom" id="wQF-dK-AWZ"/>
+                                        </constraints>
+                                        <size key="customSize" width="112" height="112"/>
+                                        <connections>
+                                            <outlet property="imageIcon" destination="KE8-Eh-nk3" id="MH9-fI-7wn"/>
+                                            <outlet property="labelContent" destination="Twl-Bp-ugH" id="o1c-Lm-aR2"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="fRX-hy-e6B">
+                                        <rect key="frame" x="144" y="15" width="112" height="112"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="112" height="112"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J5V-F8-fID">
+                                                    <rect key="frame" x="21" y="0.0" width="70" height="70"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="70" id="qF9-1R-ays"/>
+                                                        <constraint firstAttribute="height" constant="70" id="qhf-wU-Lxw"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vé máy bay giá rẻ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EuD-en-MEU">
+                                                    <rect key="frame" x="0.0" y="75" width="112" height="37"/>
+                                                    <color key="backgroundColor" red="0.086274509799999996" green="0.43921568630000002" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="EuD-en-MEU" secondAttribute="bottom" id="1v3-4d-8gk"/>
+                                            <constraint firstAttribute="trailing" secondItem="EuD-en-MEU" secondAttribute="trailing" id="9Uy-rd-r3C"/>
+                                            <constraint firstItem="EuD-en-MEU" firstAttribute="leading" secondItem="fRX-hy-e6B" secondAttribute="leading" id="g1x-wD-LX1"/>
+                                            <constraint firstItem="J5V-F8-fID" firstAttribute="centerX" secondItem="fRX-hy-e6B" secondAttribute="centerX" id="gbV-2K-4qS"/>
+                                            <constraint firstItem="EuD-en-MEU" firstAttribute="top" secondItem="J5V-F8-fID" secondAttribute="bottom" constant="5" id="juj-EA-KUl"/>
+                                            <constraint firstItem="J5V-F8-fID" firstAttribute="top" secondItem="fRX-hy-e6B" secondAttribute="top" id="rFQ-2U-hRj"/>
+                                        </constraints>
+                                        <size key="customSize" width="112" height="112"/>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="fP3-nn-7XD">
+                                        <rect key="frame" x="272" y="15" width="112" height="112"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="112" height="112"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0KU-ZK-g7G">
+                                                    <rect key="frame" x="21" y="0.0" width="70" height="70"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="70" id="Ozx-Kj-Pvj"/>
+                                                        <constraint firstAttribute="height" constant="70" id="ZY7-nA-fw3"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vé máy bay giá rẻ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xyg-yr-852">
+                                                    <rect key="frame" x="0.0" y="75" width="112" height="37"/>
+                                                    <color key="backgroundColor" red="0.086274509799999996" green="0.43921568630000002" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="0KU-ZK-g7G" firstAttribute="top" secondItem="fP3-nn-7XD" secondAttribute="top" id="Ccs-kh-GgN"/>
+                                            <constraint firstItem="Xyg-yr-852" firstAttribute="leading" secondItem="fP3-nn-7XD" secondAttribute="leading" id="WwA-17-O7b"/>
+                                            <constraint firstAttribute="trailing" secondItem="Xyg-yr-852" secondAttribute="trailing" id="j3X-Iu-Yx1"/>
+                                            <constraint firstItem="0KU-ZK-g7G" firstAttribute="centerX" secondItem="fP3-nn-7XD" secondAttribute="centerX" id="khd-xb-72K"/>
+                                            <constraint firstItem="Xyg-yr-852" firstAttribute="top" secondItem="0KU-ZK-g7G" secondAttribute="bottom" constant="5" id="pFK-qD-gka"/>
+                                            <constraint firstAttribute="bottom" secondItem="Xyg-yr-852" secondAttribute="bottom" id="vz7-3o-Og1"/>
+                                        </constraints>
+                                        <size key="customSize" width="112" height="112"/>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="2AY-I8-V5y">
+                                        <rect key="frame" x="400" y="15" width="112" height="112"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="112" height="112"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uw4-qN-y3s">
+                                                    <rect key="frame" x="21" y="0.0" width="70" height="70"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="70" id="Hfq-Uo-BxC"/>
+                                                        <constraint firstAttribute="width" constant="70" id="usD-Zy-1e6"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vé máy bay giá rẻ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mFG-fb-bUC">
+                                                    <rect key="frame" x="0.0" y="75" width="112" height="37"/>
+                                                    <color key="backgroundColor" red="0.086274509799999996" green="0.43921568630000002" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="mFG-fb-bUC" firstAttribute="leading" secondItem="2AY-I8-V5y" secondAttribute="leading" id="7VN-ZI-02Q"/>
+                                            <constraint firstAttribute="trailing" secondItem="mFG-fb-bUC" secondAttribute="trailing" id="BW4-Np-0rl"/>
+                                            <constraint firstAttribute="bottom" secondItem="mFG-fb-bUC" secondAttribute="bottom" id="N57-a1-uOF"/>
+                                            <constraint firstItem="mFG-fb-bUC" firstAttribute="top" secondItem="Uw4-qN-y3s" secondAttribute="bottom" constant="5" id="aaj-2f-JGN"/>
+                                            <constraint firstItem="Uw4-qN-y3s" firstAttribute="centerX" secondItem="2AY-I8-V5y" secondAttribute="centerX" id="kgH-bR-HTc"/>
+                                            <constraint firstItem="Uw4-qN-y3s" firstAttribute="top" secondItem="2AY-I8-V5y" secondAttribute="top" id="wMa-Ok-L2n"/>
+                                        </constraints>
+                                        <size key="customSize" width="112" height="112"/>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="lwn-vj-6yb">
+                                        <rect key="frame" x="528" y="15" width="112" height="112"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="112" height="112"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="quY-gn-QgK">
+                                                    <rect key="frame" x="21" y="0.0" width="70" height="70"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="70" id="DlC-RP-ufT"/>
+                                                        <constraint firstAttribute="width" constant="70" id="wV4-dg-DKs"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vé máy bay giá rẻ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Zq-7b-X2e">
+                                                    <rect key="frame" x="0.0" y="75" width="112" height="37"/>
+                                                    <color key="backgroundColor" red="0.086274509799999996" green="0.43921568630000002" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="quY-gn-QgK" firstAttribute="centerX" secondItem="lwn-vj-6yb" secondAttribute="centerX" id="8oe-9j-jUj"/>
+                                            <constraint firstAttribute="bottom" secondItem="1Zq-7b-X2e" secondAttribute="bottom" id="NcA-6f-h7J"/>
+                                            <constraint firstItem="quY-gn-QgK" firstAttribute="top" secondItem="lwn-vj-6yb" secondAttribute="top" id="Snk-Vj-tnh"/>
+                                            <constraint firstAttribute="trailing" secondItem="1Zq-7b-X2e" secondAttribute="trailing" id="bMe-is-zJe"/>
+                                            <constraint firstItem="1Zq-7b-X2e" firstAttribute="leading" secondItem="lwn-vj-6yb" secondAttribute="leading" id="e0w-Cd-5YB"/>
+                                            <constraint firstItem="1Zq-7b-X2e" firstAttribute="top" secondItem="quY-gn-QgK" secondAttribute="bottom" constant="5" id="kz5-B6-XjA"/>
+                                        </constraints>
+                                        <size key="customSize" width="112" height="112"/>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="wVE-mz-9Ht">
+                                        <rect key="frame" x="656" y="15" width="112" height="112"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="112" height="112"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U9O-yf-GXW">
+                                                    <rect key="frame" x="21" y="0.0" width="70" height="70"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="70" id="MVb-PH-Xs5"/>
+                                                        <constraint firstAttribute="width" constant="70" id="k3T-Xx-5wv"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vé máy bay giá rẻ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQ5-bi-0iS">
+                                                    <rect key="frame" x="0.0" y="75" width="112" height="37"/>
+                                                    <color key="backgroundColor" red="0.086274509799999996" green="0.43921568630000002" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="iQ5-bi-0iS" secondAttribute="trailing" id="MRx-21-33g"/>
+                                            <constraint firstItem="iQ5-bi-0iS" firstAttribute="top" secondItem="U9O-yf-GXW" secondAttribute="bottom" constant="5" id="Oq4-Y5-oSO"/>
+                                            <constraint firstItem="iQ5-bi-0iS" firstAttribute="leading" secondItem="wVE-mz-9Ht" secondAttribute="leading" id="Uyl-BI-h6S"/>
+                                            <constraint firstAttribute="bottom" secondItem="iQ5-bi-0iS" secondAttribute="bottom" id="VxI-QZ-YXT"/>
+                                            <constraint firstItem="U9O-yf-GXW" firstAttribute="top" secondItem="wVE-mz-9Ht" secondAttribute="top" id="Xh5-1m-fLz"/>
+                                            <constraint firstItem="U9O-yf-GXW" firstAttribute="centerX" secondItem="wVE-mz-9Ht" secondAttribute="centerX" id="vQI-fN-3Ec"/>
+                                        </constraints>
+                                        <size key="customSize" width="112" height="112"/>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Rdx-eS-TEZ"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Jub-tO-nW1"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DDo-rq-Xbq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Bfr-eY-SJu"/>
+                            <constraint firstItem="FHM-8U-O6U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CCp-Ya-QI4"/>
+                            <constraint firstItem="sPB-Tf-RPZ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Cg9-Qx-0bf"/>
+                            <constraint firstItem="Vbl-qZ-JiD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Rq8-HR-IXo"/>
+                            <constraint firstItem="sPB-Tf-RPZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Viz-RG-nTw"/>
+                            <constraint firstItem="FHM-8U-O6U" firstAttribute="bottom" secondItem="DDo-rq-Xbq" secondAttribute="bottom" id="cD3-oF-Rhu"/>
+                            <constraint firstItem="FHM-8U-O6U" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="cPj-Ed-vgM"/>
+                            <constraint firstItem="DDo-rq-Xbq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="h7D-g4-Z0B"/>
+                            <constraint firstItem="Vbl-qZ-JiD" firstAttribute="top" secondItem="DDo-rq-Xbq" secondAttribute="bottom" constant="24" id="hhb-GA-sHp"/>
+                            <constraint firstItem="DDo-rq-Xbq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="tYQ-Pd-Hvj"/>
+                            <constraint firstItem="sPB-Tf-RPZ" firstAttribute="top" secondItem="Vbl-qZ-JiD" secondAttribute="bottom" constant="20" id="vKn-4L-pRV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="collectionView" destination="sPB-Tf-RPZ" id="1NO-uW-fhj"/>
+                        <outlet property="pageControl" destination="FHM-8U-O6U" id="HNp-8m-nRz"/>
+                        <outlet property="pagerView" destination="DDo-rq-Xbq" id="dqW-f6-W57"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="72.413793103448285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="baner4.jpg" width="750" height="319"/>
+    </resources>
+</document>
