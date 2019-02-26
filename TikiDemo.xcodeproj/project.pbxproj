@@ -28,6 +28,7 @@
 		20A232FD22251733008F61CA /* PageSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A232F922251733008F61CA /* PageSize.swift */; };
 		20A232FE22251733008F61CA /* BaseEntitySend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A232FA22251733008F61CA /* BaseEntitySend.swift */; };
 		20A2330022251777008F61CA /* UserInfoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A232FF22251777008F61CA /* UserInfoEntity.swift */; };
+		20EEE421222543F20000843F /* MargirLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EEE420222543F20000843F /* MargirLabel.swift */; };
 		FABABC9B1F5F25D6CD25ABD4 /* Pods_TikiDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA041F8513E4AA961EBBC6E1 /* Pods_TikiDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,7 @@
 		20A232F922251733008F61CA /* PageSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageSize.swift; sourceTree = "<group>"; };
 		20A232FA22251733008F61CA /* BaseEntitySend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseEntitySend.swift; sourceTree = "<group>"; };
 		20A232FF22251777008F61CA /* UserInfoEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoEntity.swift; sourceTree = "<group>"; };
+		20EEE420222543F20000843F /* MargirLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MargirLabel.swift; sourceTree = "<group>"; };
 		35230E6F915E1022BB4A00E8 /* Pods-TikiDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikiDemo.debug.xcconfig"; path = "Target Support Files/Pods-TikiDemo/Pods-TikiDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		DA041F8513E4AA961EBBC6E1 /* Pods_TikiDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TikiDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -203,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				20A232FF22251777008F61CA /* UserInfoEntity.swift */,
+				20EEE420222543F20000843F /* MargirLabel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 			files = (
 				20A232FC22251733008F61CA /* EntityError.swift in Sources */,
 				20A232FE22251733008F61CA /* BaseEntitySend.swift in Sources */,
+				20EEE421222543F20000843F /* MargirLabel.swift in Sources */,
 				20A2330022251777008F61CA /* UserInfoEntity.swift in Sources */,
 				20A232FB22251733008F61CA /* BaseEntity.swift in Sources */,
 				20A232AE2224E14E008F61CA /* ViewController.swift in Sources */,

@@ -10,12 +10,43 @@ import UIKit
 import FSPagerView
 import SDWebImage
 
+extension UIColor {
+    convenience init(hexString: String, alpha: CGFloat = 1.0) {
+        let hexString: String = hexString.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        let scanner = Scanner(string: hexString)
+        if (hexString.hasPrefix("#")) {
+            scanner.scanLocation = 1
+        }
+        var color: UInt32 = 0
+        scanner.scanHexInt32(&color)
+        let mask = 0x000000FF
+        let r = Int(color >> 16) & mask
+        let g = Int(color >> 8) & mask
+        let b = Int(color) & mask
+        let red   = CGFloat(r) / 255.0
+        let green = CGFloat(g) / 255.0
+        let blue  = CGFloat(b) / 255.0
+        self.init(red:red, green:green, blue:blue, alpha:alpha)
+    }
+    func toHexString() -> String {
+        var r:CGFloat = 0
+        var g:CGFloat = 0
+        var b:CGFloat = 0
+        var a:CGFloat = 0
+        getRed(&r, green: &g, blue: &b, alpha: &a)
+        let rgb:Int = (Int)(r*255)<<16 | (Int)(g*255)<<8 | (Int)(b*255)<<0
+        return String(format:"#%06x", rgb)
+    }
+}
+
 class ViewController: UIViewController, FSPagerViewDataSource, FSPagerViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
     
     var model: TikiModel!
     
     @IBOutlet weak var collectionView: UICollectionView!
+    fileprivate let arrColor = ["#16702e","#005a51","#996c00","#5c0a6b","#006d90","#996c00","#974e06","#99272e","#89221f","#00345d"]
     
+     //MARK: UICollectionView
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if self.model != nil {
             return self.model.arrayKeywords?.count ?? 0
@@ -36,6 +67,13 @@ class ViewController: UIViewController, FSPagerViewDataSource, FSPagerViewDelega
         cell.labelContent.text = modelDetail.keyword
         cell.imageIcon.sd_setImage(with: URL(string: modelDetail.icon ?? ""), placeholderImage: UIImage.init(named: ""))
         
+        
+        if arrColor.count < indexPath.row + 1 {
+            cell.labelContent.backgroundColor = UIColor(hexString: arrColor[indexPath.row - arrColor.count])
+        } else {
+           cell.labelContent.backgroundColor = UIColor(hexString: arrColor[indexPath.row])
+        }
+        
     }
     
     //MARK: UICollectionViewDelegate
@@ -46,8 +84,8 @@ class ViewController: UIViewController, FSPagerViewDataSource, FSPagerViewDelega
     func collectionView(collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath: NSIndexPath) {
         // When user deselects the cell
     }
-
     
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
