@@ -18,6 +18,18 @@ class DemoColectionCell: UICollectionViewCell {
         super.awakeFromNib()
         labelContent.layer.cornerRadius = 5
         labelContent.layer.masksToBounds = true
+        self.contentView.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
+    override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
+        setNeedsLayout()
+        layoutIfNeeded()
+        let size = contentView.systemLayoutSizeFitting(layoutAttributes.size)
+        var frame = layoutAttributes.frame
+        frame.size.width = ceil(size.width)
+        frame.size.height = ceil(size.height)
+        layoutAttributes.frame = frame
+        return layoutAttributes
     }
     
     

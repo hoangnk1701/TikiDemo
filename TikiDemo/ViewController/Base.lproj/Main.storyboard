@@ -42,52 +42,56 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="fq2-u6-a2h"/>
                                 </connections>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sPB-Tf-RPZ">
-                                <rect key="frame" x="0.0" y="295" width="375" height="142"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sPB-Tf-RPZ">
+                                <rect key="frame" x="0.0" y="295" width="375" height="160"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="142" id="3QR-I3-Fgs"/>
+                                    <constraint firstAttribute="height" constant="160" id="3QR-I3-Fgs"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="16" minimumInteritemSpacing="0.0" id="Hae-xK-dHc">
-                                    <size key="itemSize" width="112" height="112"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Hae-xK-dHc">
+                                    <size key="itemSize" width="160" height="160"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="16" minY="16" maxX="16" maxY="16"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="NTp-x8-blL" customClass="DemoColectionCell" customModule="TikiDemo" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="15" width="112" height="112"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="112" height="112"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baner4.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="KE8-Eh-nk3">
-                                                    <rect key="frame" x="21" y="0.0" width="70" height="70"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baner4.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="KE8-Eh-nk3">
+                                                    <rect key="frame" x="32" y="0.0" width="96" height="96"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="70" id="dkW-lR-YO6"/>
-                                                        <constraint firstAttribute="height" constant="70" id="sRh-5h-34w"/>
+                                                        <constraint firstAttribute="width" constant="96" id="Cnx-pI-Obe"/>
+                                                        <constraint firstAttribute="height" constant="96" id="XCN-hS-2K8"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vé máy bay giá rẻ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Twl-Bp-ugH" customClass="MargirLabel" customModule="TikiDemo" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="75" width="112" height="37"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vé máy bay giá rẻ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Twl-Bp-ugH" customClass="MargirLabel" customModule="TikiDemo" customModuleProvider="target">
+                                                    <rect key="frame" x="16" y="101" width="128" height="40"/>
                                                     <color key="backgroundColor" red="0.086274509799999996" green="0.43921568630000002" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="13"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="112" id="CPK-EA-wI5"/>
+                                                        <constraint firstAttribute="height" constant="40" id="ezg-CD-MYi"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="KE8-Eh-nk3" firstAttribute="centerX" secondItem="NTp-x8-blL" secondAttribute="centerX" id="8k7-Qb-iMm"/>
-                                            <constraint firstAttribute="trailing" secondItem="Twl-Bp-ugH" secondAttribute="trailing" id="NHW-Em-C6c"/>
-                                            <constraint firstItem="Twl-Bp-ugH" firstAttribute="leading" secondItem="NTp-x8-blL" secondAttribute="leading" id="Uhj-VL-aS7"/>
-                                            <constraint firstItem="KE8-Eh-nk3" firstAttribute="top" secondItem="NTp-x8-blL" secondAttribute="top" id="Z1x-1u-0eb"/>
-                                            <constraint firstItem="Twl-Bp-ugH" firstAttribute="top" secondItem="KE8-Eh-nk3" secondAttribute="bottom" constant="5" id="jAT-Uz-ySL"/>
-                                            <constraint firstAttribute="bottom" secondItem="Twl-Bp-ugH" secondAttribute="bottom" id="wQF-dK-AWZ"/>
+                                            <constraint firstItem="Twl-Bp-ugH" firstAttribute="leading" secondItem="NTp-x8-blL" secondAttribute="leading" constant="16" id="0qx-xH-Lj2"/>
+                                            <constraint firstItem="Twl-Bp-ugH" firstAttribute="top" secondItem="KE8-Eh-nk3" secondAttribute="bottom" constant="5" id="2rR-l3-7kD"/>
+                                            <constraint firstAttribute="trailing" secondItem="Twl-Bp-ugH" secondAttribute="trailing" constant="16" id="6q5-ol-wCs"/>
+                                            <constraint firstItem="KE8-Eh-nk3" firstAttribute="top" secondItem="NTp-x8-blL" secondAttribute="top" id="9iA-2V-bKY"/>
+                                            <constraint firstItem="KE8-Eh-nk3" firstAttribute="centerX" secondItem="NTp-x8-blL" secondAttribute="centerX" id="AGy-Am-S1t"/>
+                                            <constraint firstItem="Twl-Bp-ugH" firstAttribute="centerX" secondItem="NTp-x8-blL" secondAttribute="centerX" id="FaA-ff-jf6"/>
                                         </constraints>
-                                        <size key="customSize" width="112" height="112"/>
+                                        <size key="customSize" width="160" height="160"/>
                                         <connections>
                                             <outlet property="imageIcon" destination="KE8-Eh-nk3" id="MH9-fI-7wn"/>
                                             <outlet property="labelContent" destination="Twl-Bp-ugH" id="o1c-Lm-aR2"/>

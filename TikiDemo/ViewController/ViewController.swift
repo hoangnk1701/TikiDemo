@@ -47,6 +47,13 @@ class ViewController: UIViewController, FSPagerViewDataSource, FSPagerViewDelega
     fileprivate let arrColor = ["#16702e","#005a51","#996c00","#5c0a6b","#006d90","#996c00","#974e06","#99272e","#89221f","#00345d"]
     
      //MARK: UICollectionView
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        let modelDetail: TikiDetailModel = self.model.arrayKeywords![indexPath.row]
+//        let size = CGSize(width: 1000, height: 141)
+//        let estimatedFrame = NSString(string: modelDetail.keyword!).boundingRect(with: size, options: .usesLineFragmentOrigin, attributes:[NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14)], context: nil)
+//        return CGSize(width: estimatedFrame.width, height: 141);
+//    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if self.model != nil {
             return self.model.arrayKeywords?.count ?? 0
@@ -91,7 +98,15 @@ class ViewController: UIViewController, FSPagerViewDataSource, FSPagerViewDelega
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.getListData()
+//        (collectionView?.collectionViewLayout as? UICollectionViewFlowLayout)?.estimatedItemSize = CGSize(width: 2000, height: 141)
+        
+        if let flowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout,
+            let collectionView = collectionView {
+            let w = collectionView.frame.width - 20
+            flowLayout.estimatedItemSize = CGSize(width: w, height: 141)
+        }
     }
+    
 
     fileprivate let imageNames = ["baner1.png","baner2.jpg","baner3.jpg","baner4.jpg"]
     fileprivate var numberOfItems = 4
